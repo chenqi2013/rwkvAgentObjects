@@ -17,7 +17,7 @@ npm run dev
 npm run build
 ```
 
-构建产物位于 `out/`，可以由任意静态文件服务器托管。根入口 `out/index.html` 会跳转到英文页面；语言页面分别位于 `out/en/` 和 `out/zh/`。
+构建产物位于 `out/`，可以由任意静态文件服务器托管。根入口 `out/index.html` 会跳转到英文页面；GitHub Pages 的语言入口分别为 `/en` 和 `/zh`。
 
 ## 部署到 GitHub Pages
 
