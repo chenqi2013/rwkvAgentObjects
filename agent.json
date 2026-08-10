@@ -346,5 +346,159 @@
             "en": "RWKV participates in goal parsing, planning, action selection, failure analysis, replanning, and final response generation. Tool observations and validation results feed back into a persistent multi-step execution loop that can retry, revise its plan, and resume after interruption.",
             "zh": "RWKV参与目标解析、规划、动作选择、失败分析、重规划和最终回答生成；工具观察与验证结果会回流到持久化的多步执行循环中，使其能够重试、修订计划并在中断后恢复。"
         }
+    },
+    {
+        "创建用户名": "rwkv-rs",
+        "账号类型": {
+            "en": "GitHub organization",
+            "zh": "GitHub组织"
+        },
+        "作者备注": {
+            "en": "Originally published by w1c2j3; transferred to the rwkv-rs organization",
+            "zh": "最初由w1c2j3发布，现已转移至rwkv-rs组织"
+        },
+        "用户头像": "https://avatars.githubusercontent.com/u/186930499?v=4",
+        "GitHub地址": "https://github.com/rwkv-rs/RWKV-Scout",
+        "曾用名或别名地址": [
+            "https://github.com/w1c2j3/rwkv-ecra-rebuild"
+        ],
+        "项目名称": "RWKV-Scout",
+        "曾用项目名称": "RWKV-ECRA",
+        "创建时间": "2026-07-27T07:15:47Z",
+        "最后更新时间": "2026-08-10T07:35:26Z",
+        "主要语言": "Python",
+        "许可证": "MIT",
+        "Stars": 0,
+        "项目类型": {
+            "en": "Auditable RWKV web-retrieval agent",
+            "zh": "可审计的RWKV联网检索Agent"
+        },
+        "介绍": {
+            "en": "A runnable public-beta retrieval agent with RWKV as the decision core. RWKV decomposes tasks, selects tools, queries and sources, reviews evidence, decides whether to replan or finish, and writes the final answer. The engineering layer executes tools, fetches and cleans pages, maintains per-task evidence ledgers, records traces, and controls resources without replacing the model's retrieval route.",
+            "zh": "一个可运行的公开Beta检索Agent，以RWKV作为决策核心。RWKV负责拆解任务、选择工具、查询与来源、审核证据、决定重规划或结束并生成最终回答；工程层负责执行工具、抓取清洗网页、维护任务级证据账本、记录trace与控制资源，但不替代模型决定检索路线。"
+        },
+        "Agent循环判断": {
+            "en": "Implements a concrete multi-step agent loop in agent/unified_research.py. On every step RWKV selects a registered tool and exact arguments; the controller executes the call and feeds the bounded observation back through the planner. Unknown tools and duplicate routes also return feedback. When RWKV requests finish_task, an RWKV cross-validation pass chooses finish or replan; a replan rebuilds the planner session and continues the loop.",
+            "zh": "在agent/unified_research.py中实现了明确的多步Agent循环：每一步由RWKV选择已注册工具及准确参数，Controller执行后把有界观察结果反馈给Planner；未知工具与重复路径同样形成反馈。RWKV选择finish_task后，还会由RWKV交叉验证决定结束或replan；replan会重建Planner会话并继续循环。"
+        },
+        "主要能力": {
+            "en": [
+                "RWKV task planning, tool selection, evidence review, replanning, and final writing",
+                "Web search, page fetching, cleaning, chunking, and evidence extraction",
+                "Calculator, date, time, structured-data, and connector tools",
+                "Per-task claim and retrieval ledgers with trace recording",
+                "OpenAI-compatible and direct RWKV runtimes with request-level sampling controls"
+            ],
+            "zh": [
+                "RWKV任务规划、工具选择、证据审核、重规划与最终写作",
+                "网页搜索、抓取、清洗、分块与证据抽取",
+                "计算器、日期、时间、结构化数据与连接器工具",
+                "任务级Claim/Retrieval账本与trace记录",
+                "支持OpenAI兼容及直接RWKV运行时，并提供请求级采样控制"
+            ]
+        },
+        "已知限制": {
+            "en": [
+                "Public beta rather than a production release",
+                "Designed for bounded single-request research, not persistent long-horizon task execution",
+                "Long-task persistence, crash recovery, and task graphs are not implemented"
+            ],
+            "zh": [
+                "属于公开Beta，尚非生产版本",
+                "面向有界的单请求研究，不是持久化长程任务执行器",
+                "长任务持久化、崩溃恢复和Task Graph尚未实现"
+            ]
+        },
+        "信息来源": {
+            "en": [
+                "GitHub repository metadata and redirect verification",
+                "Project README and architecture documentation",
+                "Planner, unified research loop, tool registry, and state implementation"
+            ],
+            "zh": [
+                "GitHub仓库元数据与跳转核验",
+                "项目README与架构文档",
+                "Planner、统一研究循环、工具注册表与状态实现"
+            ]
+        },
+        "分类结论": {
+            "en": "Strict Agent",
+            "zh": "严格Agent"
+        },
+        "分类依据": {
+            "en": "RWKV repeatedly chooses executable actions from current task and evidence state, receives tool observations, and can change route, replan, or stop. The implemented loop satisfies all parts of the strict Agent criterion.",
+            "zh": "RWKV会依据当前任务与证据状态反复选择可执行动作，接收工具观察，并能改变路线、重规划或停止；已实现的闭环满足严格Agent标准的全部条件。"
+        }
+    },
+    {
+        "创建用户名": "CodeDoes",
+        "用户头像": "https://avatars.githubusercontent.com/u/20872701?v=4",
+        "GitHub地址": "https://github.com/CodeDoes/rwkv-harness",
+        "项目名称": "rwkv-harness",
+        "创建时间": "2026-07-01T19:36:08Z",
+        "最后更新时间": "2026-07-10T19:43:04Z",
+        "主要语言": "TypeScript",
+        "许可证": null,
+        "Stars": 1,
+        "项目类型": {
+            "en": "RWKV agent harness with persistent state and tool use",
+            "zh": "支持持久状态与工具调用的RWKV Agent Harness"
+        },
+        "介绍": {
+            "en": "A TypeScript agent harness for local RWKV inference. It combines fixed-size RWKV state and checkpoint persistence with a bounded AgentLoop, structured tool-call grammar, file and shell tools, configurable agent packages, CLI agent mode, and evaluation coverage. The repository currently emphasizes storytelling but also includes default, coder, envoy, and storyteller agents.",
+            "zh": "面向本地RWKV推理的TypeScript Agent Harness。它将固定大小的RWKV状态与检查点持久化、有界AgentLoop、结构化工具调用语法、文件与Shell工具、可配置Agent包、CLI Agent模式及评测覆盖组合起来。目前重点偏向故事生成，但同时包含default、coder、envoy和storyteller等Agent。"
+        },
+        "Agent循环判断": {
+            "en": "src/agents/loop.ts implements an explicit generate, parse, execute, and feedback loop up to a configurable maximum depth. Model output is parsed into tool calls, handlers execute them, tool-response blocks are appended to the next model prompt, and the model continues until it produces final text or reaches the bound. Tool errors and repeated calls are also returned as observations so the model can correct its next action.",
+            "zh": "src/agents/loop.ts实现了明确的“生成、解析、执行、反馈”循环，并由可配置最大深度约束。模型输出被解析为工具调用，Handler执行后把tool-response块加入下一次模型输入，模型继续行动直至生成最终文本或达到步数上限；工具错误和重复调用也会作为观察返回，供模型修正下一步动作。"
+        },
+        "主要能力": {
+            "en": [
+                "Bounded multi-step tool loop with structured tool-call grammar",
+                "Read, write, edit, list, find, grep, mkdir, and shell tools",
+                "Read-before-edit guard and repeated-call detection with corrective feedback",
+                "RWKV state persistence, checkpoints, state-tune caching, and LoRA adapters",
+                "Default, coder, envoy, and storyteller agent packages"
+            ],
+            "zh": [
+                "带结构化工具调用语法的有界多步工具循环",
+                "读取、写入、编辑、列目录、查找、grep、建目录与Shell工具",
+                "先读后改约束及重复调用检测，并向模型返回纠错反馈",
+                "RWKV状态持久化、检查点、State Tune缓存与LoRA适配器",
+                "default、coder、envoy与storyteller Agent包"
+            ]
+        },
+        "已知限制": {
+            "en": [
+                "Early experimental repository with limited public documentation",
+                "The main README emphasizes storytelling and does not document the newer agent loop in full",
+                "Some gateway and evaluation features remain incomplete"
+            ],
+            "zh": [
+                "仍是早期实验仓库，公开文档有限",
+                "主README偏重故事生成，未完整记录较新的Agent循环",
+                "部分Gateway与评测功能仍未完成"
+            ]
+        },
+        "信息来源": {
+            "en": [
+                "GitHub repository metadata",
+                "README and AGENTS.md",
+                "AgentLoop, tool registry, CLI, agent packages, and tests"
+            ],
+            "zh": [
+                "GitHub仓库元数据",
+                "README与AGENTS.md",
+                "AgentLoop、工具注册表、CLI、Agent包与测试"
+            ]
+        },
+        "分类结论": {
+            "en": "Strict Agent",
+            "zh": "严格Agent"
+        },
+        "分类依据": {
+            "en": "The model selects executable tools, receives their results in the next prompt, and continues or corrects its actions across multiple bounded steps. This is implemented code rather than a roadmap claim.",
+            "zh": "模型会选择可执行工具，在下一轮输入中接收工具结果，并跨多个有界步骤继续或修正行动；这是已经实现的代码，而不是路线图声明。"
+        }
     }
 ]
