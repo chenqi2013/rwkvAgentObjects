@@ -94,12 +94,30 @@
   }
 
   .project-card {
-    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    background:
+      linear-gradient(145deg, oklch(0.18 0.018 255 / 0.72), transparent 42%),
+      var(--card);
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background-color 180ms ease;
   }
 
   .project-card:hover {
     border-color: var(--card-hover-border);
     box-shadow: var(--card-hover-shadow);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+  }
+
+  .project-card::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+    content: "";
+    opacity: 0;
+    transition: opacity 180ms ease;
+  }
+
+  .project-card:hover::before,
+  .project-card:has(.project-card-trigger:focus-visible)::before {
+    opacity: 0.9;
   }
 }
