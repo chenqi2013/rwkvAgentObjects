@@ -492,24 +492,45 @@ export function AgentCatalog({
           ) : filteredProjects.length ? (
             <div className="grid gap-4 lg:grid-cols-2">
               {filteredProjects.map((project) => (
-                <Card key={project.id} className="project-card gap-0 overflow-hidden py-0 shadow-none">
-                  <CardHeader className="flex flex-row items-start gap-4 px-5 pb-4 pt-5 sm:px-6 sm:pt-6">
-                    <Avatar className="size-11" size="lg">
+                <Card
+                  key={project.id}
+                  className="project-card relative isolate gap-0 overflow-hidden py-0 shadow-none has-[.project-card-trigger:focus-visible]:border-primary/70 has-[.project-card-trigger:focus-visible]:ring-3 has-[.project-card-trigger:focus-visible]:ring-ring/25"
+                >
+                  <button
+                    type="button"
+                    className="project-card-trigger absolute inset-0 z-0 cursor-pointer rounded-xl outline-none"
+                    aria-label={`${dictionary.projects.openDetails} ${project.projectName}`}
+                    onClick={() => setSelectedProject(project)}
+                  />
+                  <CardHeader className="pointer-events-none relative z-1 flex flex-row items-start gap-4 px-5 pb-4 pt-5 sm:px-6 sm:pt-6">
+                    <Avatar className="size-12 bg-muted ring-4 ring-background/70" size="lg">
                       {project.avatarUrl ? <AvatarImage src={project.avatarUrl} alt="" /> : null}
                       <AvatarFallback>{initials(project.projectName)}</AvatarFallback>
                     </Avatar>
                     <div className="min-w-0 flex-1">
-                      <h3 className="truncate text-lg font-semibold tracking-tight">{project.projectName}</h3>
-                      <p className="mt-1 truncate text-sm text-muted-foreground">{project.creatorName}</p>
+                      <div className="flex min-w-0 items-center gap-2">
+                        <h3 className="truncate text-lg font-semibold tracking-tight transition-colors group-hover/card:text-primary">
+                          {project.projectName}
+                        </h3>
+                        <ArrowUpRight className="size-4 shrink-0 text-muted-foreground/50 transition-all group-hover/card:-translate-y-0.5 group-hover/card:translate-x-0.5 group-hover/card:text-primary" />
+                      </div>
+                      <div className="mt-1.5 flex min-w-0 items-center gap-2">
+                        <p className="truncate text-sm text-muted-foreground">{project.creatorName}</p>
+                        {project.classification ? (
+                          <Badge variant="outline" className="max-w-40 truncate border-primary/20 bg-primary/5 text-[0.68rem] text-primary/90">
+                            {project.classification}
+                          </Badge>
+                        ) : null}
+                      </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-4 px-5 pb-5 sm:px-6">
+                  <CardContent className="pointer-events-none relative z-1 space-y-4 px-5 pb-5 sm:px-6">
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary" className="gap-1.5 font-normal"><Code2 />{project.primaryLanguage ?? "—"}</Badge>
-                      <Badge variant="secondary" className="gap-1.5 font-normal"><Star />{project.stars}</Badge>
-                      <Badge variant="secondary" className="font-normal">{project.license ?? "—"}</Badge>
+                      <Badge variant="secondary" className="gap-1.5 border border-border/60 bg-muted/70 font-normal"><Code2 />{project.primaryLanguage ?? "—"}</Badge>
+                      <Badge variant="secondary" className="gap-1.5 border border-border/60 bg-muted/70 font-normal"><Star />{project.stars}</Badge>
+                      <Badge variant="secondary" className="border border-border/60 bg-muted/70 font-normal">{project.license ?? "—"}</Badge>
                     </div>
-                    <p className="text-sm font-medium text-foreground/90">{project.projectType ?? "—"}</p>
+                    <p className="text-sm font-medium leading-6 text-foreground/90">{project.projectType ?? "—"}</p>
                     <p className="line-clamp-3 min-h-[4.5rem] text-sm leading-6 text-muted-foreground">
                       {project.introduction ?? "—"}
                     </p>
@@ -520,20 +541,23 @@ export function AgentCatalog({
                       </span>
                     </div>
                   </CardContent>
-                  <CardFooter className="flex justify-between border-t bg-muted/15 px-5 py-3 sm:px-6">
-                    <Button variant="ghost" size="sm" className="gap-2" onClick={() => setSelectedProject(project)}>
-                      {dictionary.projects.viewArchive}
-                      <ArrowUpRight />
-                    </Button>
+                  <CardFooter className="pointer-events-none relative z-1 flex min-h-14 justify-between border-t border-border/70 bg-gradient-to-r from-muted/20 to-primary/5 px-5 py-3 sm:px-6">
+                    <span className="flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors group-hover/card:text-foreground">
+                      <span className="size-1.5 rounded-full bg-primary/70 shadow-[0_0_10px_var(--primary)]" />
+                      {dictionary.projects.cardDetailHint}
+                    </span>
                     {project.githubUrl ? (
                       <Button
-                        variant="ghost"
-                        size="icon-sm"
+                        variant="outline"
+                        size="sm"
                         nativeButton={false}
+                        className="pointer-events-auto relative z-10 gap-2 border-border/80 bg-background/70 text-foreground shadow-sm backdrop-blur-sm hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
                         aria-label={`${dictionary.projects.githubAriaPrefix} ${project.projectName}${dictionary.projects.githubAriaSuffix}`}
                         render={<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" />}
                       >
                         <GitFork />
+                        GitHub
+                        <ExternalLink className="size-3! opacity-60" />
                       </Button>
                     ) : null}
                   </CardFooter>

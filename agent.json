@@ -592,26 +592,6 @@
         "分类依据": {"en": "Runs RWKV in a multi-step browsing Agent evaluation and therefore matches the broader Agent-related scope.", "zh": "在多步浏览Agent评测中运行RWKV，因此符合扩展后的Agent相关收录口径。"}
     },
     {
-        "创建用户名": "No-22-Github",
-        "用户头像": "https://avatars.githubusercontent.com/u/132265925?v=4",
-        "GitHub地址": "https://github.com/No-22-Github/RepoScout",
-        "项目名称": "RepoScout",
-        "创建时间": "2026-03-28T18:37:55Z",
-        "最后更新时间": "2026-06-20T07:40:07Z",
-        "主要语言": "Go",
-        "许可证": "Apache-2.0",
-        "Stars": 1,
-        "项目类型": {"en": "Repository reconnaissance infrastructure for coding Agents", "zh": "面向Coding Agent的仓库侦察基础设施"},
-        "介绍": {
-            "en": "A read-only context-reconnaissance tool that expands candidate files from seed files, optionally uses an LLM to rerank them, and emits a ContextPack with reading order and risk hints for an upstream coding Agent.",
-            "zh": "只读的上下文侦察工具：从seed files扩展候选文件，可选使用LLM重排，并向上游Coding Agent输出包含阅读顺序和风险提示的ContextPack。"
-        },
-        "Agent循环判断": {"en": "It explicitly does not take over planning or code modification; the upstream Agent continues the task.", "zh": "明确不接管规划或代码修改，后续任务由上游Agent继续完成。"},
-        "信息来源": {"en": ["GitHub metadata", "README", "MVP documentation", "Go implementation"], "zh": ["GitHub元数据", "README", "MVP文档", "Go实现"]},
-        "分类结论": {"en": "Agent infrastructure", "zh": "Agent基础设施"},
-        "分类依据": {"en": "Purpose-built as a context tool consumed by coding Agents.", "zh": "专门作为Coding Agent使用的上下文工具。"}
-    },
-    {
         "创建用户名": "scarletwolf_ai",
         "账号平台": "Codeberg",
         "GitHub地址": "https://codeberg.org/scarletwolf_ai/rwkv-toolcaller-bench",

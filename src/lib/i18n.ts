@@ -64,6 +64,8 @@ export type UiDictionary = {
     emptyFile: string;
     updatedPrefix: string;
     viewArchive: string;
+    openDetails: string;
+    cardDetailHint: string;
     githubAriaPrefix: string;
     githubAriaSuffix: string;
     noResults: string;
