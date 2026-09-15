@@ -1,5 +1,13 @@
 [
   {
+    "projectName": "ai00-x-client",
+    "repositoryUrl": "https://github.com/cgisky1980/ai00-x-client",
+    "lastUpdated": "2026-09-15T07:48:28Z",
+    "stars": 3,
+    "forks": 2,
+    "watchers": 0
+  },
+  {
     "projectName": "RWKV-LH",
     "repositoryUrl": "https://github.com/rwkv-rs/RWKV-LH",
     "lastUpdated": "2026-09-14T08:42:18Z",
@@ -13,14 +21,6 @@
     "lastUpdated": "2026-09-12T08:18:55Z",
     "stars": 2,
     "forks": 0,
-    "watchers": 0
-  },
-  {
-    "projectName": "ai00-x-client",
-    "repositoryUrl": "https://github.com/cgisky1980/ai00-x-client",
-    "lastUpdated": "2026-09-12T07:11:44Z",
-    "stars": 2,
-    "forks": 2,
     "watchers": 0
   },
   {
@@ -123,7 +123,7 @@
     "projectName": "rwkv-agent-kit",
     "repositoryUrl": "https://github.com/Ai00-X/rwkv-agent-kit",
     "lastUpdated": "2025-09-09T02:49:57Z",
-    "stars": 17,
+    "stars": 19,
     "forks": 1,
     "watchers": 0
   }]
