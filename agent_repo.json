@@ -1,8 +1,16 @@
 [
   {
+    "projectName": "RWKV-LH",
+    "repositoryUrl": "https://github.com/rwkv-rs/RWKV-LH",
+    "lastUpdated": "2026-09-21T06:40:20Z",
+    "stars": 2,
+    "forks": 0,
+    "watchers": 0
+  },
+  {
     "projectName": "RWKV-Agent",
     "repositoryUrl": "https://github.com/No-22-Github/RWKV-Agent",
-    "lastUpdated": "2026-09-19T09:50:58Z",
+    "lastUpdated": "2026-09-21T06:14:40Z",
     "stars": 2,
     "forks": 0,
     "watchers": 0
@@ -21,14 +29,6 @@
     "lastUpdated": "2026-09-15T07:48:28Z",
     "stars": 4,
     "forks": 2,
-    "watchers": 0
-  },
-  {
-    "projectName": "RWKV-LH",
-    "repositoryUrl": "https://github.com/rwkv-rs/RWKV-LH",
-    "lastUpdated": "2026-09-14T08:42:18Z",
-    "stars": 2,
-    "forks": 0,
     "watchers": 0
   },
   {
