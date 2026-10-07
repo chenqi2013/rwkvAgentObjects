@@ -1,5 +1,29 @@
 [
   {
+    "projectName": "RWKV-Agent",
+    "repositoryUrl": "https://github.com/No-22-Github/RWKV-Agent",
+    "lastUpdated": "2026-10-07T08:47:53Z",
+    "stars": 2,
+    "forks": 1,
+    "watchers": 0
+  },
+  {
+    "projectName": "RWKV-LH",
+    "repositoryUrl": "https://github.com/rwkv-rs/RWKV-LH",
+    "lastUpdated": "2026-10-07T04:02:31Z",
+    "stars": 2,
+    "forks": 0,
+    "watchers": 0
+  },
+  {
+    "projectName": "noesis",
+    "repositoryUrl": "https://github.com/Vaniell0/noesis",
+    "lastUpdated": "2026-10-06T16:17:55Z",
+    "stars": 4,
+    "forks": 1,
+    "watchers": 0
+  },
+  {
     "projectName": "ai00-x-client",
     "repositoryUrl": "https://github.com/cgisky1980/ai00-x-client",
     "lastUpdated": "2026-10-06T09:02:31Z",
@@ -8,34 +32,10 @@
     "watchers": 0
   },
   {
-    "projectName": "RWKV-Agent",
-    "repositoryUrl": "https://github.com/No-22-Github/RWKV-Agent",
-    "lastUpdated": "2026-10-03T17:50:50Z",
-    "stars": 2,
-    "forks": 1,
-    "watchers": 0
-  },
-  {
-    "projectName": "RWKV-LH",
-    "repositoryUrl": "https://github.com/rwkv-rs/RWKV-LH",
-    "lastUpdated": "2026-09-30T18:08:54Z",
-    "stars": 2,
-    "forks": 0,
-    "watchers": 0
-  },
-  {
     "projectName": "RWKV-SearchReader",
     "repositoryUrl": "https://github.com/w1c2j3/RWKV-SearchReader",
     "lastUpdated": "2026-09-26T11:47:30Z",
     "stars": 2,
-    "forks": 1,
-    "watchers": 0
-  },
-  {
-    "projectName": "noesis",
-    "repositoryUrl": "https://github.com/Vaniell0/noesis",
-    "lastUpdated": "2026-09-16T15:06:41Z",
-    "stars": 4,
     "forks": 1,
     "watchers": 0
   },
