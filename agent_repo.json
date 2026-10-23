@@ -1,5 +1,13 @@
 [
   {
+    "projectName": "noesis",
+    "repositoryUrl": "https://github.com/Vaniell0/noesis",
+    "lastUpdated": "2026-10-22T14:00:05Z",
+    "stars": 4,
+    "forks": 1,
+    "watchers": 0
+  },
+  {
     "projectName": "RWKV-Agent",
     "repositoryUrl": "https://github.com/No-22-Github/RWKV-Agent",
     "lastUpdated": "2026-10-22T02:34:40Z",
@@ -45,14 +53,6 @@
     "lastUpdated": "2026-10-09T03:20:21Z",
     "stars": 3,
     "forks": 0,
-    "watchers": 0
-  },
-  {
-    "projectName": "noesis",
-    "repositoryUrl": "https://github.com/Vaniell0/noesis",
-    "lastUpdated": "2026-10-07T18:23:03Z",
-    "stars": 4,
-    "forks": 1,
     "watchers": 0
   },
   {
